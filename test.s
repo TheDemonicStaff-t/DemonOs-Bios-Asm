@@ -1,5 +1,8 @@
-section .fsheaders
+bits 16
+
 header_start:
+jmp short header_end
+nop  ; header entry
 BPB_OEM:                db "MSWIN4.1"
 BPB_SECTOR_SIZE:        dw 512
 BPB_SECT_PER_CLUSTER:   db 1
